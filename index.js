@@ -29,6 +29,7 @@ app.post("/api/loan-details", (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
-  console.log(`API server running at http://localhost:${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
